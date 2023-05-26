@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@font-face {
+  font-family: "inter";
+  src: url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap") format("truetype");
+}
+.m-auto {
+  margin: auto;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.btn-more {
+  margin-bottom: 40px !important;
+}
+@media screen and (min-width: 310px) and (max-width: 768px) {
+  .btn-more {
+    margin-bottom: 20px !important;
+  }
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "inter", sans-serif;
+  background: #F1EBDB;
+  overflow-x: hidden;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+section .item {
+  width: 842px;
+  height: 595px;
+  margin-bottom: 40px;
+}
+section .item > img {
+  width: 842px;
+  height: 595px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#button-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FF9800;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button-top > img {
+  width: 26px;
+}
+#button-top:hover {
+  cursor: pointer;
+  background-color: #333;
+  transition: all 0.5s ease;
+}
+#button-top:active {
+  background-color: #555;
+}
+#button-top.show {
+  opacity: 1;
+  visibility: visible;
+}/*# sourceMappingURL=style.css.map */

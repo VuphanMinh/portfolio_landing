@@ -1,0 +1,141 @@
+$black: #000000;
+$white: #ffffff;
+$gray-black: #403C39;
+$grey: #555555;
+$brown: #5E2824;
+$brown-light: #F1EBDB;
+$black-brown: #403C39;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+// Dancing Script
+@font-face {
+    font-family: 'inter';
+    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap') format('truetype');
+}
+
+// ============== Settings responsive ===============
+$breakpoints: (
+  'pc': 'screen and (min-width: 769px)',
+  'sp': 'screen and (min-width: 310px) and (max-width: 768px)',
+  'mini-tablet': 'screen and (min-width: 768px) and (max-width: 1024px)',
+  'tablet': 'screen and (min-width: 1025px) and (max-width: 1280px)'
+
+) !default;
+
+@mixin res_for($breakpoint: pc) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+.m-auto {
+    margin: auto;
+}
+
+.p-0 {
+    padding: 0;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.mb-60 {
+    margin-bottom: 60px;
+}
+
+.mb-60 {
+    margin-bottom: 60px;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.btn-more {
+    margin-bottom: 40px !important;
+
+    @include res_for(sp) {
+        margin-bottom: 20px !important;
+    }
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'inter', sans-serif;
+    background: $brown-light;
+    overflow-x: hidden;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .item {
+        width: 842px;
+        height: 595px;
+        margin-bottom: 40px;
+    
+        & > img {
+            width: 842px;
+            height: 595px;
+            object-fit: cover;
+        }
+    }
+}
+
+
+#button-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FF9800;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+
+    & > img {
+        width: 26px;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: #333;
+        transition: all 0.5s ease;
+    }
+
+    &:active {
+        background-color: #555;
+    }
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+  }
+
